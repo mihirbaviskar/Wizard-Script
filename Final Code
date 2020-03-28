@@ -3,6 +3,7 @@ console.log(title);
 var quizzes = ["Apollo Missions Trivia", "World Capitals Trivia", "Big Cats Trivia", "Ancient Egypt Trivia", "Eleventh Grade Vocabulary Trivia", 
 "Ninth Grade Vocabulary Trivia", "Greek Mythology Trivia", "Famous Poets", "Famous World Leaders", "Heart Trivia"];
 var t  =  quizzes.indexOf(title);
+console.log(t);
 var qa =[]; 
 if(t == 0){
 qa[0]={q:'In which mission did an astronaut perform a golf shot on the moon?', a:'Apollo 14'};
@@ -176,7 +177,7 @@ qa[11]={q:'Thomas Jefferson wrote which famous US document?', a:'The Declaration
 qa[12]={q:"What was Julius Caesar's motto?', a:'I came, I saw, I conquered"};
 qa[13]={q:'Who was Margaret Thatcher?', a:'British Prime Minister'};
 }
-else{
+if(t == 9){
 qa[0]={q:'How many chambers does a human heart have?', a:'4'};
 qa[1]={q:'The heart beats approximately ____________ times each day.', a:'100000'};
 qa[2]={q:'What anatomical system is the heart a part of?', a:'Cardiovascular system'};
