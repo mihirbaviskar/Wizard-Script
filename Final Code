@@ -1,1 +1,33 @@
+var qa =[]; 
+qa[0]={q:'What is the capital of Australia?', a:'Canberra'};
+qa[1]={q:'What is the capital of Austria?', a:'Vienna'};
+qa[2]={q:'What is the capital of Belgium?', a:'Brussels'};
+qa[3]={q:'What is the capital of Brazil?', a:'Brasilia'};
+qa[4]={q:'What is the capital of Canada?', a:'Ottawa'};
+qa[5]={q:'What is the capital of China?', a:'Beijing'};
+qa[6]={q:'What is the capital of Cuba?', a:'Havana'};
+qa[7]={q:'What is the capital of Czech Republic?', a:'Prague'};
+qa[8]={q:'What is the capital of Denmark?', a:'Copenhagen'};
+qa[9]={q:'What is the capital of Egypt?', a:'Cairo'};
+qa[10]={q:'What is the capital of Finland?', a:'Helsinki'};
+qa[11]={q:'What is the capital of France?', a:'Paris'};
+qa[12]={q:'What is the capital of Germany?', a:'Berlin'};
+qa[13]={q:'What is the capital of Greece?', a:'Athens'};
+qa[14]={q:'What is the capital of Hungary?', a:'Budapest'};
+qa[15]={q:'What is the capital of India?', a:'New Delhi'};
+qa[16]={q:'What is the capital of Italy?', a:'Rome'};
+qa[17]={q:'What is the capital of Japan?', a:'Tokyo'};
+qa[18]={q:'What is the capital of Mexico?', a:'Mexico City'};
+qa[19]={q:'What is the capital of The Bahamas?', a:'Nassau'};
+var answer  = qa[0].a;
+var question  = document.getElementsByClassName("quizQuestion");
+for(int i = 0; i<qa.length; i++){
+	if(qa[i].equals(question[0])) answer  = qa.a;
+}
+
+var elements  = document.getElementsByClassName("largecheckbox");
+var selection  = elements[Math.floor(Math.random()*elements.length)];
+selection.className = "largecheckboxselected";
+selectQuizAnswer(selection);
+setTimeout(function(){document.getElementById("nextQuestion").click()},1000);
 
