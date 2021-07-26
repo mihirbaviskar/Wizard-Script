@@ -199,13 +199,13 @@ qa[17]={q:'Which vein carries oxygen-rich blood to the heart from the lungs?', a
 qa[18]={q:'Which ventricle pumps oxygen-rich blood to the body?', a:'Left ventricle'};
 qa[19]={q:'Which ventricle pumps oxygen-poor blood to the lungs?', a:'Right ventricle'};
 }
-var answer  = qa[0].a;
-var question  = document.getElementsByClassName("quizQuestion");
+var answer  = qa[0].a; //sets the answer to the answer of the first question
+var question  = document.getElementsByClassName("quizQuestion"); //gets the question
 for(var i = 1; i<qa.length; i++){
-	if(qa[i].q.includes(question[0].innerText)) answer  = qa[i].a;
+	if(qa[i].q.includes(question[0].innerText)) answer  = qa[i].a; // question[0].innerText is the text of the question
 }
-console.log(question[0].innerText);
-console.log(answer);
+console.log(question[0].innerText); // prints the question
+console.log(answer); // prints the answer
 var elements  = document.getElementsByClassName("largecheckbox");
 var answerChoices  = document.getElementsByClassName("answerText");
 var selectionIndex  = 0;
@@ -213,6 +213,26 @@ for(var i = 1; i<answerChoices.length; i++){
 	if(answerChoices[i].innerText.includes(answer)) selectionIndex = i;
 }
 var selection = elements[selectionIndex];
-selection.className = "largecheckboxselected";
+selection.className = "largecheckboxselected"; // selects checkbox
 selectQuizAnswer(selection);
 setTimeout(function(){document.getElementById("nextQuestion").click()},1000);
+/*var seeScoreButton  = document.getElementsByClassName("kiaccountsbuttonblue")[0]; // for selecting seeScoreButton and then claimRewardButton
+seeScoreButton.click();
+var claimReward  = document.getElementsByClassName("buttonsubmit")[0];
+claimReward.click();
+document.getElementsByClassName("kiaccountsbuttongreen")[0].click();
+
+1. https://www.wizard101.com/quiz/trivia/game/apollo-missions-trivia
+2. https://www.wizard101.com/quiz/trivia/game/world-capitals-trivia
+3. https://www.wizard101.com/quiz/trivia/game/big-cats-trivia
+4. https://www.wizard101.com/quiz/trivia/game/ancient-egypt-trivia
+5. https://www.wizard101.com/quiz/trivia/game/eleventh-grade-vocabulary-trivia
+6. https://www.wizard101.com/quiz/trivia/game/ninth-grade-vocabulary-trivia
+7. https://www.wizard101.com/quiz/trivia/game/greek-mythology-trivia
+8. https://www.wizard101.com/quiz/trivia/game/famous-poets
+9. https://www.wizard101.com/quiz/trivia/game/famous-world-leaders
+10.https://www.wizard101.com/quiz/trivia/game/heart-trivia
+
+
+*/
+
