@@ -1,4 +1,4 @@
-var title = document.getElementsByClassName("quizTitle")[0].innerText;
+var title = document.getElementsByClassName("contentbox")[0].innerText;
 console.log(title);
 var quizzes = ["Apollo Missions Trivia", "World Capitals Trivia", "Big Cats Trivia", "Ancient Egypt Trivia", "Eleventh Grade Vocabulary Trivia", 
 "Ninth Grade Vocabulary Trivia", "Greek Mythology Trivia", "Famous Poets", "Famous World Leaders", "Heart Trivia"];
